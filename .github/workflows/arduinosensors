@@ -1,0 +1,76 @@
+
+import serial
+import time
+
+# Define the RE and DE pins
+RE_PIN = 8
+DE_PIN = 7
+
+# Modbus RTU requests for reading NPK values
+nitro = [0x01, 0x03, 0x00, 0x1e, 0x00, 0x01, 0xe4, 0x0c]
+phos = [0x01, 0x03, 0x00, 0x1f, 0x00, 0x01, 0xb5, 0xcc]
+pota = [0x01, 0x03, 0x00, 0x20, 0x00, 0x01, 0x85, 0xc0]
+
+# Initialize the serial connection
+ser = serial.Serial('COM3', 9600)  # Change 'COM3' to your Arduino's port
+
+def setup():
+    # Define pin modes for RE and DE
+    ser.write(b'RE,OUTPUT\r')
+    ser.write(b'DE,OUTPUT\r')
+    time.sleep(0.5)
+
+def nitrogen():
+    ser.write(b'DE,HIGH\r')
+    ser.write(b'RE,HIGH\r')
+    time.sleep(0.01)
+    if ser.write(bytearray(nitro))==8:
+        ser.write(b'DE,LOW\r')
+        ser.write(b'RE,LOW\r')
+        values = []
+        for i in range(7):
+            values.append(ser.read())
+        return values[4]
+
+def phosphorous():
+    ser.write(b'DE,HIGH\r')
+    ser.write(b'RE,HIGH\r')
+    time.sleep(0.01)
+    if ser.write(bytearray(phos))==8:
+        ser.write(b'DE,LOW\r')
+        ser.write(b'RE,LOW\r')
+        values = []
+        for i in range(7):
+            values.append(ser.read())
+        return values[4]
+
+def potassium():
+    ser.write(b'DE,HIGH\r')
+    ser.write(b'RE,HIGH\r')
+    time.sleep(0.01)
+    if ser.write(bytearray(pota))==8:
+        ser.write(b'DE,LOW\r')
+        ser.write(b'RE,LOW\r')
+        values = []
+        for i in range(7):
+            values.append(ser.read())
+        return values[4]
+
+def loop():
+    while True:
+        val1 = nitrogen()
+        time.sleep(0.25)
+        val2 = phosphorous()
+        time.sleep(0.25)
+        val3 = potassium()
+        time.sleep(0.25)
+
+        print("Nitrogen: {} mg/kg".format(val1))
+        print("Phosphorous: {} mg/kg".format(val2))
+        print("Potassium: {} mg/kg".format(val3))
+
+        time.sleep(2)
+
+if __name__ == "__main__":
+    setup()
+    loop()
