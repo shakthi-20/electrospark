@@ -74,3 +74,85 @@ def loop():
 if __name__ == "__main__":
     setup()
     loop()
+
+
+
+
+
+
+
+
+//  Soil Moisture Sensor
+import serial
+import time
+
+# Sensor pins
+SENSOR_POWER_PIN = 7
+SENSOR_PIN = 8
+
+# Initialize the serial connection
+ser = serial.Serial('COM3', 9600)  # Change 'COM3' to your Arduino's port
+
+def setup():
+    # Set the sensorPower pin as OUTPUT
+    ser.write(b'sensorPower,OUTPUT\r')
+    time.sleep(0.5)
+
+def read_sensor():
+    # Turn the sensor ON
+    ser.write(b'sensorPower,HIGH\r')
+    time.sleep(0.01)  # Allow power to settle
+    # Read the analog value from the sensor
+    ser.write(b'sensorPin,READ\r')
+    val = int(ser.readline())
+    # Turn the sensor OFF
+    ser.write(b'sensorPower,LOW\r')
+    return val
+
+def loop():
+    while True:
+        val = read_sensor()
+        print("Digital Output:", val)
+        # Determine the status of soil moisture
+        if val:
+            print("Status: Soil is too dry - time to water!")
+        else:
+            print("Status: Soil moisture is perfect")
+        time.sleep(1)  # Take a reading every second for testing
+
+if __name__ == "__main__":
+    setup()
+    loop()
+
+
+
+
+
+
+
+//DHT11 and DHT22 temperature and humidity Sensors with Arduino
+
+import Adafruit_DHT
+import time
+
+# Define sensor type and pin
+sensor = Adafruit_DHT.DHT22
+data_pin = 8
+
+def setup():
+    pass  # No setup needed
+
+def loop():
+    while True:
+        humidity, temperature = Adafruit_DHT.read_retry(sensor, data_pin)
+        if humidity is not None and temperature is not None:
+            print("Temperature = {:.1f} C | {:.1f} F".format(temperature, temperature * 9.0 / 5.0 + 32.0))
+            print("Humidity = {:.1f} %".format(humidity))
+            print("")
+        else:
+            print("Failed to retrieve data from sensor")
+        time.sleep(2)  # Delay for 2 seconds
+
+if __name__ == "__main__":
+    setup()
+    loop()
