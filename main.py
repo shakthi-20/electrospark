@@ -1,6 +1,6 @@
 # main.py
 
-from src._plant_health_data import PlantHealthPredictor
+from src.plant_health_predictor import PlantHealthPredictor
 import numpy as np
 
 if __name__ == "__main__":
