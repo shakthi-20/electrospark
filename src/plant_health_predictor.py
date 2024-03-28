@@ -1,3 +1,5 @@
+# planthealthpredictor.py
+
 import numpy as np
 import pandas as pd
 import torch
@@ -10,9 +12,6 @@ try:
     from torch.utils import mkl as mkl_torch
 except ImportError:
     mkl_torch = None
-
-# Set the number of threads to be used by MKL for parallel execution
-mkl.set_num_threads(4)  # Adjust the number of threads as needed
 
 class PlantHealthPredictor:
     def __init__(self):
