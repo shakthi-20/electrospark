@@ -1,4 +1,4 @@
-                                                                                                                Smart Farming Monitoring System
+                                                                  Smart Farming Monitoring System
 
 
 Welcome to our smart farming hackathon project, where innovation meets agriculture! Our project is a groundbreaking solution that combines the latest advancements in IoT and AI technologies to revolutionize traditional farming practices. By integrating sensors for soil moisture, temperature, and crop health monitoring, our system provides farmers with real-time data and actionable insights to enhance productivity and sustainability.
