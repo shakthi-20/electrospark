@@ -18,7 +18,7 @@ Welcome to the future of farming. Welcome to our smart farming monitoring projec
 
 Features:
  
-     1.Intelligent Crop Management: Utilize AI-powered analytics to provide personalized recommendations 
+   1)Intelligent Crop Management: Utilize AI-powered analytics to provide personalized recommendations 
      for optimal crop care, including irrigation,fertilization, and pest control, tailored to specific
      plant needs and environmental conditions.
 
