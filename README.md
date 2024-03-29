@@ -18,14 +18,19 @@ Welcome to the future of farming. Welcome to our smart farming monitoring projec
 
 Features:
  
-     Intelligent Crop Management: Utilize AI-powered analytics to provide personalized recommendations for optimal crop care, including irrigation, fertilization, and pest control, tailored to specific plant needs and environmental conditions.
+     1)Intelligent Crop Management: Utilize AI-powered analytics to provide personalized recommendations for optimal crop care, including irrigation, fertilization, and pest control, tailored
+     to specific plant needs and environmental conditions.
 
-    Automated Harvesting System: Implement robotic harvesting solutions equipped and AI algorithms to autonomously identify and harvest ripe crops, increasing efficiency and reducing labor costs.
+   2) Automated Harvesting System: Implement robotic harvesting solutions equipped and AI algorithms to autonomously
+     identify and harvest ripe crops, increasing efficiency and reducing labor costs.
 
-    Climate-Responsive Irrigation: Integrate weather forecasting data with soil moisture sensors to automatically adjust irrigation schedules, ensuring plants receive the right amount of water at the right time, conserving water and improving crop health.
+   3) Climate-Responsive Irrigation: Integrate weather forecasting data with soil moisture sensors to automatically adjust irrigation schedules,
+      ensuring plants receive the right amount of water at the right time, conserving water and improving crop health.
 
-    Smart Greenhouses: Implement IoT-enabled greenhouses with automated climate control, including temperature, humidity, ensuring optimal growing conditions and maximizing crop yield.
+   4) Smart Greenhouses: Implement IoT-enabled greenhouses with automated climate control,
+      including temperature, humidity, ensuring optimal growing conditions and maximizing crop yield.
 
-    Farming-as-a-Service Platform: Offer a comprehensive platform that provides farmers with access to advanced technologies, such as AI, IoT, and drones, as a service, democratizing access to cutting-edge farming tools and techniques.
+   5) Farming-as-a-Service Platform: Offer a comprehensive platform that provides farmers with
+       access to advanced technologies, such as AI, IoT, and drones, as a service, democratizing access to cutting-edge farming tools and techniques.
 
     These features leverage the latest technologies to revolutionize traditional farming practices, making agriculture more efficient, sustainable, and profitable.
