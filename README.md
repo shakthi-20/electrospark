@@ -110,4 +110,4 @@ A PlantHealthPredictor class designed to predict the health status of plants bas
 
  * Output: The output of the code includes the prediction (healthy or unhealthy), the sensor values used for prediction, and the recommended actions for optimal resource allocation.
 
-Overall, this code demonstrates how machine learning and AI algorithms can be used in smart farming to predict plant health and provide actionable recommendations for improving crop yield and health. The use of libraries like torch for neural network training and sklearn for data manipulation and model evaluation enhances the code's capabilities and efficiency.
+Overall, this demonstrates how machine learning and AI algorithms can be used in smart farming to predict plant health and provide actionable recommendations for improving crop yield and health. The use of libraries like torch for neural network training and sklearn for data manipulation and model evaluation enhances the code's capabilities and efficiency.
