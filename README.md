@@ -75,33 +75,36 @@ The machine learning models used in our solution are trained using a combination
 Throughout the training process, we monitor the model's performance on a separate validation dataset to prevent overfitting and ensure that the model generalizes well to new, unseen data. Once trained, the models can be used to predict plant health based on new sensor data, providing valuable insights for farmers to optimize their crop management practices.
 
 
+
+
+
 Output Demonstration:
 
 
 A PlantHealthPredictor class designed to predict the health status of plants based on various sensor values. Here's a detailed explanation of how the code works:
 
-   Importing Libraries: The code begins by importing necessary libraries such as numpy, pandas, torch, and sklearn.
+  * Importing Libraries: The code begins by importing necessary libraries such as numpy, pandas, torch, and sklearn.
 
-  Setting MKL Threads: The code sets the number of threads to be used by MKL for parallel execution, which can enhance performance.
+ * Setting MKL Threads: The code sets the number of threads to be used by MKL for parallel execution, which can enhance performance.
 
-  PlantHealthPredictor Class: This class contains several methods for loading data, training the model, making predictions, providing feedback, and recommending optimal resource allocation.
+ * PlantHealthPredictor Class: This class contains several methods for loading data, training the model, making predictions, providing feedback, and recommending optimal resource allocation.
 
- __init__: Initializes the class with a None model.
+ *__init__: Initializes the class with a None model.
 
- load_data_from_file: Loads data from a CSV file, separating features (X) and labels (y).
+* load_data_from_file: Loads data from a CSV file, separating features (X) and labels (y).
 
- train_model: Trains a neural network model using the features (X) and labels (y) data. It uses a sequential neural network with two linear layers and a ReLU activation function.
+* train_model: Trains a neural network model using the features (X) and labels (y) data. It uses a sequential neural network with two linear layers and a ReLU activation function.
 
- predict: Predicts the health status of a plant based on a new sample.
+* predict: Predicts the health status of a plant based on a new sample.
 
- feedback: Provides feedback based on the prediction, indicating whether the plant is healthy or needs attention for optimal growth.
+* feedback: Provides feedback based on the prediction, indicating whether the plant is healthy or needs attention for optimal growth.
 
- optimal_resource_allocation: Recommends optimal actions based on the sensor values to improve the plant's health. Actions include adjusting soil moisture, temperature, nutrient levels, pH, pest control, oxygen levels, manure, and weed presence.
+* optimal_resource_allocation: Recommends optimal actions based on the sensor values to improve the plant's health. Actions include adjusting soil moisture, temperature, nutrient levels, pH, pest control, oxygen levels, manure, and weed presence.
 
-save_model and load_model: Save and load the trained model to/from a file.
+* save_model and load_model: Save and load the trained model to/from a file.
 
- Main Execution: The main section of the code creates an instance of the PlantHealthPredictor class, loads data from a file, trains the model, selects a random sample for prediction, predicts the plant health, provides feedback, and recommends optimal resource allocation based on the sensor values.
+* Main Execution: The main section of the code creates an instance of the PlantHealthPredictor class, loads data from a file, trains the model, selects a random sample for prediction, predicts the plant health, provides feedback, and recommends optimal resource allocation based on the sensor values.
 
-  Output: The output of the code includes the prediction (healthy or unhealthy), the sensor values used for prediction, and the recommended actions for optimal resource allocation.
+ * Output: The output of the code includes the prediction (healthy or unhealthy), the sensor values used for prediction, and the recommended actions for optimal resource allocation.
 
 Overall, this code demonstrates how machine learning and AI algorithms can be used in smart farming to predict plant health and provide actionable recommendations for improving crop yield and health. The use of libraries like torch for neural network training and sklearn for data manipulation and model evaluation enhances the code's capabilities and efficiency.
