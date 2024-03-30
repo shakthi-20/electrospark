@@ -92,6 +92,12 @@ These sample input values represent typical sensor readings that our AI models w
 
 
 
+
+
+
+
+
+
 Training Machine Learning Models for Plant Health Prediction:
 
 The machine learning models used in our solution are trained using a combination of neural networks, decision trees, and ensemble methods like random forests. Here's a detailed overview of how each type of model is trained:
