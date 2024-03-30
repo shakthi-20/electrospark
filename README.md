@@ -78,7 +78,10 @@ Throughout the training process, we monitor the model's performance on a separat
 
 
 
-Output Demonstration:
+            Output Demonstration:
+
+![outputgen](https://github.com/shakthi-20/electrospark/assets/149308206/80593f6c-c9b2-4328-bc98-a0d5f0baf0f4)
+
 
 
 A PlantHealthPredictor class designed to predict the health status of plants based on various sensor values. Here's a detailed explanation of how the code works:
