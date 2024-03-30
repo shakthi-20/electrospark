@@ -42,6 +42,10 @@ Features:
  Our Smart Farming Hackathon project integrates cutting-edge technology to revolutionize agriculture. Utilizing Arduino, Python, the Intel® AI Analytics Toolkit, and the Intel® Math Kernel Library (Intel® MKL), we have developed a system that monitors essential parameters such as soil moisture, temperature, and nutrient levels in real-time.
 
 Through Arduino, we gather data from sensors placed in the field, while Python, with the assistance of NumPy, Pandas, and the Intel® MKL, processes this data to reveal valuable insights. The Intel® AI Analytics Toolkit enhances our data analysis capabilities, enabling us to predict optimal planting times and detect diseases early.
- The Intel® oneAPI Toolkit further boosts our project's performance, ensuring efficient data processing and analysis.The generated output provides farmers with valuable insights into various parameters affecting their crops, such as soil moisture, temperature, and nutrient levels.
+ The Intel® oneAPI Toolkit further boosts our project's performance, ensuring efficient data processing and analysis.The generated output provides farmers with valuable insights into various parameters affecting their crops, such as soil moisture, temperature, and nutrient levels.Our plant health prediction solution is significantly enhanced with the integration of Intel® Math Kernel Library (MKL), which optimizes mathematical operations in our neural network model. MKL ensures that computations are performed efficiently, leading to faster inference times and improved overall performance.
+
+Without MKL, our solution would still function, but the computational efficiency and speed would be reduced. The neural network model would take longer to process sensor data and make predictions, potentially impacting the real-time nature of the application.
+
+By leveraging MKL, we can provide farmers with a faster and more responsive plant health prediction system, ultimately helping them make timely decisions to improve crop yield and sustainability.
 
 By combining these technologies, we aim to empower farmers with the tools they need to make informed decisions, optimize resource allocation, and enhance crop yield, ultimately contributing to a more sustainable and productive future for agriculture.
