@@ -89,7 +89,7 @@ A PlantHealthPredictor class designed to predict the health status of plants bas
 
  * PlantHealthPredictor Class: This class contains several methods for loading data, training the model, making predictions, providing feedback, and recommending optimal resource allocation.
 
- *__init__: Initializes the class with a None model.
+ * __init__: Initializes the class with a None model.
 
 * load_data_from_file: Loads data from a CSV file, separating features (X) and labels (y).
 
