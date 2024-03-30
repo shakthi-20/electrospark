@@ -71,9 +71,24 @@ Through Arduino, we gather data from sensors placed in the field, while Python, 
  The Intel® oneAPI Toolkit further boosts our project's performance, ensuring efficient data processing and analysis.The generated output provides farmers with valuable insights into various parameters affecting their crops, such as soil moisture, temperature, and nutrient levels.Our plant health prediction solution is significantly enhanced with the integration of Intel® Math Kernel Library (MKL), which optimizes mathematical operations in our neural network model. MKL ensures that computations are performed efficiently, leading to faster inference times and improved overall performance.
 
 Without MKL, our solution would still function, but the computational efficiency and speed would be reduced. The neural network model would take longer to process sensor data and make predictions, potentially impacting the real-time nature of the application.
-
-
 By leveraging MKL, we can provide farmers with a faster and more responsive plant health prediction system, ultimately helping them make timely decisions to improve crop yield and sustainability.
+
+For our smart farming project, we have decided to utilize three key sensors: the Nutrient Soil Sensor, Soil Moisture Sensor, and Temperature Sensor. These sensors play a crucial role in monitoring the vital parameters of the soil and environment necessary for plant growth.
+
+In the future, we plan to expand our sensor array to include additional sensors for more comprehensive data collection. This expansion will enable us to gather a broader range of environmental data, allowing for more detailed analysis and better decision-making.
+
+All these sensors are connected to an Arduino Uno board, which serves as the central hub for data collection and processing. The Arduino Uno board collects sensor data and sends it to our AI models for analysis and prediction.
+
+Due to the unavailability of hardware, we have decided to use datasheets and sample input values to simulate sensor readings. This approach allows us to test and develop our AI models without the need for physical sensors.
+
+The following is an example of how we can generate input values for our AI models using sample data:
+
+python
+
+# Sample input values for soil sensors (nutrient soil sensor, soil moisture sensor, temperature sensor)
+sample_input = [3.5, 45, 25]  # Nutrient level, Soil moisture (%), Temperature (°C)
+
+These sample input values represent typical sensor readings that our AI models would process to make predictions and provide recommendations for optimal plant health and resource allocation.
 
 By combining these technologies, we aim to empower farmers with the tools they need to make informed decisions, optimize resource allocation, and enhance crop yield, ultimately contributing to a more sustainable and productive future for agriculture.
 
