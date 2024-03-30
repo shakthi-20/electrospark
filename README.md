@@ -52,7 +52,8 @@ By leveraging MKL, we can provide farmers with a faster and more responsive plan
 By combining these technologies, we aim to empower farmers with the tools they need to make informed decisions, optimize resource allocation, and enhance crop yield, ultimately contributing to a more sustainable and productive future for agriculture.
 
 
-Training Machine Learning Models for Plant Health Prediction 
+Training Machine Learning Models for Plant Health Prediction:
+
 The machine learning models used in our solution are trained using a combination of neural networks, decision trees, and ensemble methods like random forests. Here's a detailed overview of how each type of model is trained:
 
 1. **Neural Networks:**
