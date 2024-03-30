@@ -83,14 +83,13 @@ Due to the unavailability of hardware, we have decided to use datasheets and sam
 
 The following is an example of how we can generate input values for our AI models using sample data:
 
-python
-
 # Sample input values for soil sensors (nutrient soil sensor, soil moisture sensor, temperature sensor)
 sample_input = [3.5, 45, 25]  # Nutrient level, Soil moisture (%), Temperature (°C)
 
 These sample input values represent typical sensor readings that our AI models would process to make predictions and provide recommendations for optimal plant health and resource allocation.
 
-By combining these technologies, we aim to empower farmers with the tools they need to make informed decisions, optimize resource allocation, and enhance crop yield, ultimately contributing to a more sustainable and productive future for agriculture.
+
+
 
 
 Training Machine Learning Models for Plant Health Prediction:
