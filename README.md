@@ -1,4 +1,4 @@
-                           Smart Farming Monitoring System
+                          Smart Farming Monitoring System
 
 Welcome to the future of farming, where technology meets agriculture in a symphony of innovation and efficiency. Imagine a world where fields are no longer just plots of land, but living, breathing ecosystems of data and intelligence. Our smart farming solution is not just a system; it's a revolution, transforming the way we grow crops and manage our farms.
 
