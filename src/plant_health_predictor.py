@@ -2,25 +2,33 @@ import numpy as np
 import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
 import torch.nn as nn
 import mkl
+from sklearn.preprocessing import MinMaxScaler
+from sklearnex import patch_sklearn
 
-try:
-    from torch.utils import mkl as mkl_torch
-except ImportError:
-    mkl_torch = None
+# Apply Intel's scikit-learn optimizations
+patch_sklearn()
+
+# Set the number of threads to be used by MKL for parallel execution
+mkl.set_num_threads(4)  # Adjust the number of threads as needed
 
 class PlantHealthPredictor:
     def __init__(self):
         self.model = None
+        self.scaler = None
 
     def load_data_from_file(self, file_path):
         # Load data from CSV file
         data = pd.read_csv(file_path)
         X = data.iloc[:, :-1].values  # Features (all columns except the last)
         y = data.iloc[:, -1].values    # Labels (last column)
-        return X, y
+        
+        # Normalize features using Min-Max scaling
+        self.scaler = MinMaxScaler()
+        X_normalized = self.scaler.fit_transform(X)
+
+        return X_normalized, y
 
     def train_model(self, X, y):
         # Convert labels to Long data type
@@ -35,10 +43,6 @@ class PlantHealthPredictor:
             nn.ReLU(),
             nn.Linear(64, 2)  # Output layer with 2 units for binary classification
         )
-
-        # Use MKL for PyTorch if available
-        if mkl_torch is not None:
-            self.model = self.model.to_mkldnn()
 
         # Define loss function and optimizer
         criterion = nn.CrossEntropyLoss()
