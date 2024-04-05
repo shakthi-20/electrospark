@@ -3,9 +3,9 @@ import pandas as pd
 import torch
 from sklearn.model_selection import train_test_split
 import torch.nn as nn
-import mkl
 from sklearn.preprocessing import MinMaxScaler
 from sklearnex import patch_sklearn
+import mkl
 
 # Apply Intel's scikit-learn optimizations
 patch_sklearn()
@@ -35,7 +35,7 @@ class PlantHealthPredictor:
         y_train = torch.tensor(y, dtype=torch.long)
 
         # Split data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y_train, test_size=0.2, random_state=42)
+        X_train, _, y_train, _ = train_test_split(X, y_train, test_size=0.2, random_state=42)
 
         # Define neural network model
         self.model = nn.Sequential(
@@ -49,7 +49,7 @@ class PlantHealthPredictor:
         optimizer = torch.optim.Adam(self.model.parameters(), lr=0.001)
 
         # Train the model
-        for epoch in range(100):
+        for _ in range(100):
             optimizer.zero_grad()
             outputs = self.model(torch.tensor(X_train, dtype=torch.float32))
             loss = criterion(outputs, y_train)
@@ -75,7 +75,7 @@ class PlantHealthPredictor:
 
         # Sensor values in the CSV
         sensor_names = ["Soil Moisture", "Temperature", "Nutrient Levels", "Acidity (pH)",
-                        "Pest Activity", "Oxygen Levels", "Manure Requirements", "Weed Presence"]
+                        "Pest Activity", "Oxygen Levels", "Manure Requirements"]
 
         # Print sensor values used for prediction
         print("Sensor values used for prediction:")
@@ -83,7 +83,7 @@ class PlantHealthPredictor:
             print(f"{sensor_names[i]}: {value}")
 
         # Soil Moisture
-        if sample[0] < 30:
+        if sample[0] < 0.3:
             optimal_actions.append("Increase soil moisture by watering.")
 
         # Temperature
@@ -91,7 +91,7 @@ class PlantHealthPredictor:
             optimal_actions.append("Provide shade or reduce exposure to direct sunlight.")
 
         # Nutrient Levels
-        if sample[2] < 3:
+        if sample[2] < 0.3:
             optimal_actions.append("Apply fertilizer or nutrient supplements.")
 
         # Acidity (pH)
@@ -107,12 +107,8 @@ class PlantHealthPredictor:
             optimal_actions.append("Improve ventilation or aeration.")
 
         # Manure Requirements
-        if sample[6] < 5:
+        if sample[6] < 0.5:
             optimal_actions.append("Increase organic matter or apply compost.")
-
-        # Weed Presence
-        if sample[7] == 1:
-            optimal_actions.append("Remove weeds manually or use herbicides.")
 
         print("\nOptimal resource allocation:")
         if len(optimal_actions) == 0:
