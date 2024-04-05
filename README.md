@@ -42,21 +42,13 @@ Features:
 
   Utilizing PyTorch, scikit-learn, pandas, NumPy, and oneMKL for Plant Health Prediction and Resource Allocation:
 
-  ![Picture1](https://github.com/shakthi-20/electrospark/assets/149308206/3258a7ed-fe02-4c71-82d3-88d2ae5c13f3)
+ ![Picture2](https://github.com/shakthi-20/electrospark/assets/149308206/c872f706-48b4-49e7-bcb9-9d7d0c024c61)
 
 
 
   The provided code has specific requirements for the versions of the libraries it uses. Here's a brief explanation of each requirement:
 
-1. **torch>=1.9.0**: This requirement specifies that the code needs PyTorch version 1.9.0 or higher. PyTorch is a popular deep learning framework that is used for building and training neural network models.
 
-2. **scikit-learn>=0.24.2**: This requirement specifies that the code needs scikit-learn version 0.24.2 or higher. Scikit-learn is a machine learning library that provides simple and efficient tools for data mining and data analysis.
-
-3. **pandas>=1.3.3**: This requirement specifies that the code needs pandas version 1.3.3 or higher. Pandas is a powerful data manipulation and analysis library that is often used for working with structured data.
-
-4. **numpy>=1.21.2**: This requirement specifies that the code needs NumPy version 1.21.2 or higher. NumPy is a fundamental package for scientific computing in Python, providing support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.
-
-5. **onemkl>=2022.2.0**: This requirement specifies that the code needs the oneMKL library version 2022.2.0 or higher. oneMKL is a part of the Intel oneAPI toolkit and provides optimized mathematical functions for machine learning and scientific computing applications, which can significantly improve performance on Intel processors.
 
 These requirements ensure that the code can run efficiently and take advantage of the latest features and optimizations provided by these libraries.
 
