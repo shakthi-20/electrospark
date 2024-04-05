@@ -160,6 +160,16 @@ Overall, this demonstrates how machine learning and AI algorithms can be used in
 
 
 
+DATA NORMALIZATION:
+
+ we have used Min-Max scaling for data normalization. Min-Max scaling scales the data to a fixed range, usually between 0 and 1. Here's how we have applied data normalization using Min-Max scaling in the load_data_from_file method. we first load the data from the CSV file and then use MinMaxScaler from sklearn.preprocessing to normalize the input features (X). The fit_transform method of MinMaxScaler calculates the minimum and maximum values of each feature and scales the features to a specified range (by default, 0 to 1). The normalized features (X_normalized) are then returned along with the labels (y).
+
+By normalizing the input features, we ensure that each feature contributes equally to the model's learning process, which can improve the performance of machine learning algorithms, especially neural networks.
+
+
+
+
+
 **Future Enhancements and Innovative Developments for Smart Farming**
 
 1. **Integration of Advanced Sensors**: In the future, we plan to integrate more advanced sensors such as hyperspectral imaging sensors, which can provide detailed information about plant health by capturing a wide range of wavelengths. These sensors can help in early detection of diseases, nutrient deficiencies, and other issues, enabling proactive intervention.
